@@ -32,7 +32,7 @@
         // AMD is used - Register as an anonymous module.
         define(['jquery', 'moment'], factory);
     } else if (typeof exports === 'object') {
-        factory(require('jquery'), require('moment'));
+        factory(window.$, require('moment'));
     } else {
         // Neither AMD nor CommonJS used. Use global variables.
         if (!jQuery) {
